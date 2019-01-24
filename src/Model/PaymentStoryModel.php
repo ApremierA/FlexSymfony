@@ -39,22 +39,22 @@ class PaymentStoryModel
      *    ]
      * ]
      */
-    private $amountList;
+    private $amountList = [];
 
     /**
      * @var float
      */
-    private $debtLoanSumm;
+    private $debtLoanSumm = 0.0;
 
     /**
      * @var float
      */
-    private $debtPercentSumm;
+    private $debtPercentSumm = 0.0;
 
     /**
      * @var float
      */
-    private $debtAmountSumm;
+    private $debtAmountSumm = 0.0;
 
     /**
      * @return float

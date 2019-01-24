@@ -15,6 +15,11 @@ use App\Service\LoanDataPrepareService;
 class LoanCalculateHandler
 {
     /**
+     * @var \DateTime
+     */
+    private $queryAtDate;
+
+    /**
      * @var \stdClass
      */
     private $loanData;
@@ -46,7 +51,7 @@ class LoanCalculateHandler
      */
     private function getAmountSumm(PaymentStoryModel $paymentStory)
     {
-        $debtService = new DebtCalculateService($paymentStory);
+        $debtService = new DebtCalculateService($paymentStory, $this->queryAtDate);
         $debtSumm = $debtService->getDebtAmountSumm();
 
         return $debtSumm;
@@ -82,13 +87,13 @@ class LoanCalculateHandler
         }
 
         //@TODO Validator here
+        $this->queryAtDate = new \DateTime($this->loanData->atDate);
 
         $paymentStory = new PaymentStoryModel();
         $paymentStory->setLoanBase($this->loanData->loan->base);
         $paymentStory->setLoanDate($this->loanData->loan->date);
         $paymentStory->setLoanPercent($this->loanData->loan->percent);
         $paymentStory->setLoanDuration($this->loanData->loan->duration);
-        $paymentStory->setLoanDate($this->loanData->atDate);
 
         $amountList = LoanDataPrepareService::preparePaymentAmountList($this->loanData->payments);
         $paymentStory->setAmountList($amountList);
