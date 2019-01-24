@@ -12,12 +12,13 @@ use App\Handler\LoanCalculateHandler;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class IndexController extends AbstractController
 {
 
     /**
-     * @return \App\Controller\Response
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function Index() : Response
     {
