@@ -2,7 +2,7 @@ version: '2'
 services:
     php:
       build: ./
-      image: php:7-fpm-composer-stretch
+      image: php:7.2-fpm-composer-stretch
       container_name: sflex.php
       volumes:
         - .:/var/www/html

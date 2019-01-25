@@ -2,7 +2,3 @@ index:
     path: /
     controller: App\Controller\IndexController::Index
 
-slon_calc:
-    path: /calc
-    controller: App\Controller\IndexController::Calculate
-
