@@ -1,6 +1,12 @@
 {
+    "analog/analog": {
+        "version": "1.0.11-stable"
+    },
     "doctrine/instantiator": {
         "version": "1.1.0"
+    },
+    "greenlion/php-sql-parser": {
+        "version": "v4.1.2"
     },
     "myclabs/deep-copy": {
         "version": "1.8.1"
