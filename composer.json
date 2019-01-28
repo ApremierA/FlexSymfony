@@ -12,7 +12,8 @@
         "symfony/dotenv": "*",
         "symfony/flex": "^1.1",
         "symfony/framework-bundle": "*",
-        "symfony/yaml": "*"
+        "symfony/yaml": "*",
+        "greenlion/PHP-SQL-Parser":"4.1.2"
     },
     "require-dev": {
         "phing/phing":"*",
