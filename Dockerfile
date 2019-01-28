@@ -2,7 +2,7 @@ FROM php:7.2-fpm-stretch
 
 # for composer install
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends git zip
+    apt-get install -y --no-install-recommends git zip unzip
 
 # Xdebug
 RUN pecl install xdebug && docker-php-ext-enable xdebug
